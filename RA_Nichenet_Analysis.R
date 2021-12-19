@@ -90,10 +90,9 @@ nichenet_output = nichenet_seuratobj_aggregate(
 DotPlot(seuratObj, features=c('TGFB1','IL1B','SPP1','ANXA1','PIK3CB','IFNG','CSF1','IL1RN','ICAM1','CTGF','GAS6','SEMA4D','ITGB7','ADAM17','LGALS3','YARS','ITGAM','HGF'), assay='RNA', cols='RdYlBu', group.by='type')+RotatedAxis()
 
 nichenet_output$ligand_activity_target_heatmap + scale_fill_gradient2(low = "whitesmoke",  high = "royalblue", breaks = c(0,0.003,0.006)) + xlab("RA Response in Monocytes") + ylab("Prioritized immmune cell ligands")
-# need to save this one, try to find a size that works (trial and error)
 
 
-#T CELL
+###T CELL
 
 nichenet_output = nichenet_seuratobj_aggregate(
   seurat_obj = seuratObj, 
@@ -108,7 +107,7 @@ DotPlot(seuratObj, features=c('SPP1','HLA-DRA','PLAU','DUSP18','TGFB1','CD86','I
 nichenet_output$ligand_activity_target_heatmap + scale_fill_gradient2(low = "whitesmoke",  high = "royalblue", breaks = c(0,0.003,0.006)) + xlab("RA Response in Monocytes") + ylab("Prioritized immmune cell ligands")
 
 
-#MONOCYTE
+###MONOCYTE
 
 nichenet_output = nichenet_seuratobj_aggregate(
   seurat_obj = seuratObj, 
