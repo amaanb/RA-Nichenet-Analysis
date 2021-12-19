@@ -1,6 +1,6 @@
 library(Seurat)
 library(nichenetr)
-library(tidyverse) 
+library(tidyverse)
 
 hra<-read.csv('celseq_matrix_ru10_molecules.tsv.725585', sep='\t', row.names=1)
 meta<-read.csv('celseq_meta.tsv.725591', sep = '\t', row.names = 1)
